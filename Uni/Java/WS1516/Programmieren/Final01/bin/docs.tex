@@ -1,0 +1,96 @@
+\begin{texdocpackage}{edu.kit.informatik}
+\label{texdoclet:edu.kit.informatik}
+
+\begin{texdocclass}{class}{Constant}
+\label{texdoclet:edu.kit.informatik.Constant}
+\begin{texdocclassintro}
+All constants used in the program\end{texdocclassintro}
+\begin{texdocclassfields}
+\texdocfield{public static final}{String}{CODE\_NOT\_ACCESSIBLE}{The Constant CODE\_NOT\_ACCESSIBLE.}
+\texdocfield{public static final}{String}{COMMAND\_NOT\_FOUND}{The Constant COMMAND\_NOT\_FOUND.}
+\texdocfield{public static final}{String}{COMMAND\_SUCCESSFUL}{The Constant COMMAND\_SUCCESSFUL.}
+\texdocfield{public static final}{String}{EDGE\_CANNOT\_REMOVE}{The Constant EDGE\_CANNOT\_REMOVE.}
+\texdocfield{public static final}{String}{EDGE\_CONTAINED\_ALLREADY}{The Constant EDGE\_CONTAINED\_ALLREADY.}
+\texdocfield{public static final}{String}{EDGE\_VERTEX\_NOT\_FOUND}{The Constant EDGE\_VERTEX\_NOT\_FOUND.}
+\texdocfield{public static final}{String}{FILE\_WRONG\_FORMAT}{The Constant FILE\_WRONG\_FORMAT.}
+\texdocfield{public static final}{String}{GRAPH\_EDGE\_LESS\_THAN\_ONE}{The Constant GRAPH\_EDGE\_LESS\_THAN\_ONE.}
+\texdocfield{public static final}{String}{GRAPH\_NOT\_CONTINOUS}{The Constant GRAPH\_NOT\_CONTINOUS.}
+\texdocfield{public static final}{String}{GRAPH\_VERTEX\_LESS\_THAN\_TWO}{The Constant GRAPH\_VERTEX\_LESS\_THAN\_TWO.}
+\texdocfield{public static final}{String}{NUMBER\_FORMAT\_ILLEGAL}{The Constant NUMBER\_FORMAT\_ILLEGAL.}
+\texdocfield{public static final}{String}{PREFIX\_ERROR}{The Constant PREFIX\_ERROR.}
+\texdocfield{public static final}{String}{REGEX\_CITY\_NAME}{The regex for a city name.}
+\texdocfield{public static final}{String}{REGEX\_CRITERION\_ALL}{The Constant REGEX\_CRITERION\_ALL.}
+\texdocfield{public static final}{String}{REGEX\_CRITERION\_BOTH}{The Constant REGEX\_CRITERION\_BOTH.}
+\texdocfield{public static final}{String}{REGEX\_CRITERION\_DISTANCE}{The Constant REGEX\_CRITERION\_DISTANCE.}
+\texdocfield{public static final}{String}{REGEX\_CRITERION\_TIME}{The Constant REGEX\_CRITERION\_TIME.}
+\texdocfield{public static final}{String}{REGEX\_EDGE}{The regex for an edge.}
+\texdocfield{public static final}{String}{REGEX\_GRAPH\_FILE}{The regex for a file that contains a graph.}
+\texdocfield{public static final}{String}{REGEX\_POSITIVE\_INTEGER}{The regex for a positive integer.}
+\texdocfield{public static final}{String}{REGEX\_ROUTE}{The Constant REGEX\_ROUTE.}
+\texdocfield{public static final}{String}{REGEX\_SEARCH}{The Constant REGEX\_SEARCH.}
+\texdocfield{public static final}{String}{SEPARATOR}{The regex for the SEPARATOR of the two parts in the file.}
+\texdocfield{public static final}{String}{VERTEX\_DUPLICATE}{The Constant VERTEX\_DUPLICATE.}
+\texdocfield{public static final}{String}{VERTEX\_NOT\_FOUND}{The Constant VERTEX\_NOT\_FOUND.}
+\end{texdocclassfields}
+\end{texdocclass}
+
+
+\begin{texdocclass}{class}{FileInputHelper}
+\label{texdoclet:edu.kit.informatik.FileInputHelper}
+\begin{texdocclassintro}
+Helper class for reading text files.\end{texdocclassintro}
+\begin{texdocclassmethods}
+\texdocmethod{public static}{String}{read}{(String file)}{Reads the specified file and returns its content as a String array, where
+ the first array field contains the file's first line, the second field
+ contains the second line, and so on.}{\begin{texdocparameters}
+\texdocparameter{file}{the file to be read}
+\end{texdocparameters}
+\texdocreturn{the content of the file}
+}
+\end{texdocclassmethods}
+\end{texdocclass}
+
+
+\begin{texdocclass}{class}{Main}
+\label{texdoclet:edu.kit.informatik.Main}
+\begin{texdocclassintro}
+The Class Main.\end{texdocclassintro}
+\begin{texdocclassmethods}
+\texdocmethod{public static}{void}{main}{(String args)}{The main method.}{\begin{texdocparameters}
+\texdocparameter{args}{the arguments}
+\end{texdocparameters}
+}
+\end{texdocclassmethods}
+\end{texdocclass}
+
+
+\begin{texdocclass}{class}{Terminal}
+\label{texdoclet:edu.kit.informatik.Terminal}
+\begin{texdocclassintro}
+This class provides some simple methods for input$/$output from and to a
+ terminal.
+ \begin{texdocp}
+ Never modify this class, never upload it to Praktomat. This is only for your
+ local use. If an assignment tells you to use this class for input and output
+ never use System.out or System.in in the same assignment.\end{texdocp}\end{texdocclassintro}
+\begin{texdocclassmethods}
+\texdocmethod{public static}{void}{printLine}{(String out)}{Print a String to the standard output.
+ \begin{texdocp}
+ The String out must not be null.\end{texdocp}}{\begin{texdocparameters}
+\texdocparameter{out}{The string to be printed.}
+\end{texdocparameters}
+}
+\texdocmethod{public static}{String}{readLine}{()}{Reads a line from standard input.
+ \begin{texdocp}
+ Returns null at the end of the standard input.
+ \begin{texdocp}
+ Use Ctrl+D to indicate the end of the standard input.\end{texdocp}\end{texdocp}}{\texdocreturn{The next line from the standard input or null.}
+}
+\end{texdocclassmethods}
+\end{texdocclass}
+
+
+\end{texdocpackage}
+
+
+

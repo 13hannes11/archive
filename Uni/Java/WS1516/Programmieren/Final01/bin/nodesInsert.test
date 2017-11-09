@@ -1,0 +1,11 @@
+<"C:\Eclipse\workspace\Final01\tests\test.graph">
+00err : "nodes ee"
+"Aa
+bB
+d" : "nodes C"
+"OK" : "insert C;ee;2;13"
+"C" : "nodes ee"
+"Aa
+bB
+d
+ee" : "nodes C"

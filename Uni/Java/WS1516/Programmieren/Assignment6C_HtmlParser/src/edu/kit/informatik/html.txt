@@ -1,0 +1,11 @@
+<html>
+<head>head
+</head>
+<title>Titel</title>
+<!-- Titel der Seite -->
+<body>Inhalt des HTML-Dokumentes Zeile1</body>
+<body>Inhalt des
+HTML-Dokumentes
+Zeile2</body>
+<!-- Ende des HTML-Dokumentes -->
+</html>

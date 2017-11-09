@@ -1,0 +1,20 @@
+<"C:\Eclipse\workspace\Final01\tests\test.graph">
+#Errors
+00err : "insert "
+00err : "insert null"
+00err : "insert null;null;;"
+00err : "insert null;null;null;null"
+00err : "insert null;null;null;null;null;null"
+00err : "insert Aa;EE;Cee;1"
+00err : "insert Aa;EE;1;dee"
+00err : "insert Aa;Aa;5;4"
+00err : "insert Aa;bb;10;5"
+00err : "insert bB;d;50000000000;5"
+#00err : "insert Aa;Aa;-5;4"
+00err : "insert bB;d;1;0"
+00err : "insert bB;d;0;0"
+
+#Works
+"OK" : "insert Aa;ee;1;10"
+"OK" : "insert bB;d;2;5"
+#"OK" : "insert --;d;2;5"

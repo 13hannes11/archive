@@ -1,0 +1,10 @@
+<"standard">
+"OK" : "select 0"
+"OK" : "place 0;0"
+"OK" : "select 13"
+"OK" : "place 2;0"
+"OK" : "select 5"
+"OK" : "place 3;0"
+"OK" : "select 9"
+"P1 wins
+3" : "place 1;0"

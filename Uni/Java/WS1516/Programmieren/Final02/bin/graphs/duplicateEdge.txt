@@ -1,0 +1,7 @@
+Aa
+bB
+C
+d
+--
+Aa;bB;1;3
+Aa;bB;2;4

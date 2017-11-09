@@ -1,0 +1,10 @@
+<"torus">
+"OK" : "select 12"
+"OK" : "place 4;2"
+"OK" : "select 8"
+"OK" : "place 0;2"
+"OK" : "select 14"
+"OK" : "place 1;2"
+"OK" : "select 0"
+"P1 wins
+3" : "place 5;2"

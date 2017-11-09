@@ -1,0 +1,8 @@
+<"standard">
+"OK" : "select 0"
+"OK" : "place 1;1"
+"OK" : "select 1"
+00err : "place 1;-1"
+00err : "place 2;2"
+"OK" : "select 1"
+00err : "place 6;0"

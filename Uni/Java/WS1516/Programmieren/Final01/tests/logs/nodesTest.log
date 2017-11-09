@@ -1,0 +1,18 @@
+Error, please use a valid command (valid commands: 'quit' 'info' 'vertices' 'nodes <City>' 'remove <firstCity>;<secondCity>' 'insert <firstCity>;<secondCity>;<distanceKilometer>;<distanceMinutes>' 'route <startCity>;<destinationCity>;<time|route|optimal|all>' 'search <startCity>;<destinationCity>;<time|route|optimal>'  [numbers can't be zero or less])
+Error, vertex not found
+Error, please use a valid command (valid commands: 'quit' 'info' 'vertices' 'nodes <City>' 'remove <firstCity>;<secondCity>' 'insert <firstCity>;<secondCity>;<distanceKilometer>;<distanceMinutes>' 'route <startCity>;<destinationCity>;<time|route|optimal|all>' 'search <startCity>;<destinationCity>;<time|route|optimal>'  [numbers can't be zero or less])
+Error, vertex not found
+Error, vertex not found
+bB
+C
+d
+bB
+C
+d
+Aa
+bB
+d
+Aa
+C
+Aa
+C

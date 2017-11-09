@@ -1,0 +1,1 @@
+Error,  please use a valid command (valid commands: 'select <Token>' 'bag' 'colprint <columnnumber>' 'rowprint <rownumber>' 'place <rownumber>;<columnnumber>' 'quit' 

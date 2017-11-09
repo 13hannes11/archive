@@ -1,0 +1,8 @@
+<"C:\Eclipse\workspace\Final01\tests\test.graph">
+"OK" : "remove bB;C"
+"!Cok" : "remove C;d"
+"OK" : "remove Aa;d"
+"OK" : "remove Aa;C"
+"OK" : "remove Aa;bB"
+00err : "nodes Aa"
+00err : "insert Aa;ee;10;5"

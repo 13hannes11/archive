@@ -1,0 +1,10 @@
+Error, please use a valid command (valid commands: 'quit' 'info' 'vertices' 'nodes <City>' 'remove <firstCity>;<secondCity>' 'insert <firstCity>;<secondCity>;<distanceKilometer>;<distanceMinutes>' 'route <startCity>;<destinationCity>;<time|route|optimal|all>' 'search <startCity>;<destinationCity>;<time|route|optimal>'  [numbers can't be zero or less])
+Error, please use a valid command (valid commands: 'quit' 'info' 'vertices' 'nodes <City>' 'remove <firstCity>;<secondCity>' 'insert <firstCity>;<secondCity>;<distanceKilometer>;<distanceMinutes>' 'route <startCity>;<destinationCity>;<time|route|optimal|all>' 'search <startCity>;<destinationCity>;<time|route|optimal>'  [numbers can't be zero or less])
+Error, please use a valid command (valid commands: 'quit' 'info' 'vertices' 'nodes <City>' 'remove <firstCity>;<secondCity>' 'insert <firstCity>;<secondCity>;<distanceKilometer>;<distanceMinutes>' 'route <startCity>;<destinationCity>;<time|route|optimal|all>' 'search <startCity>;<destinationCity>;<time|route|optimal>'  [numbers can't be zero or less])
+Error, please use a valid command (valid commands: 'quit' 'info' 'vertices' 'nodes <City>' 'remove <firstCity>;<secondCity>' 'insert <firstCity>;<secondCity>;<distanceKilometer>;<distanceMinutes>' 'route <startCity>;<destinationCity>;<time|route|optimal|all>' 'search <startCity>;<destinationCity>;<time|route|optimal>'  [numbers can't be zero or less])
+OK
+OK
+OK
+OK
+OK
+

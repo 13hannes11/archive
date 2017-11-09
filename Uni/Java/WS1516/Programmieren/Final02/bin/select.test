@@ -1,0 +1,7 @@
+<"torus">
+00err : "select"
+00err : "select +"
+00err : "select x;1"
+00err : "select 0002;23"
+"OK" : "select 0"
+00err : "select 1"

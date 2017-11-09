@@ -1,0 +1,178 @@
+int minToLive = 2;
+int maxToLive = 3;
+int countForBirth = 3;
+
+int sizeX = 20;
+int sizeY = 20;
+int fieldSize = 10;
+boolean[][] board;
+boolean paused = true;
+
+void reInit(int w, int h, int fS){
+    noLoop();
+    
+    sizeX = w;
+    sizeY = h;
+    fieldSize = fS;
+    
+    fill(255);
+    text("X: " + sizeX + " | Y: " + sizeY + " || FieldSize: " + fieldSize, 20, 20)
+    paused = true;
+    setup();
+    
+}
+void setup(){
+    board = new boolean[sizeX][sizeY];
+    
+    frameRate(10);
+    size(sizeX * fieldSize , sizeY * fieldSize);
+    
+    loop();
+}
+void draw(){
+    background(255);
+    
+    for(int x = 0; x < sizeX; x++){
+        for(int y = 0; y < sizeY; y++){
+            noStroke();
+            if(board[x][y])
+                fill(150,0,0);
+            else
+                fill(100);
+            rect(x*fieldSize, y* fieldSize, fieldSize, fieldSize);
+            
+            /*fill(255);
+            text("" + countNeighbours(x, y) + "" ,x*fieldSize, y*fieldSize + fieldSize);*/
+        }
+    }
+    update();
+}
+
+void mouseDragged(){
+    if(mousePressed){
+        int x = (int)(mouseX / fieldSize);
+        int y = (int)(mouseY / fieldSize);
+        
+        board[x][y] = true;
+    }
+}
+
+void update(){
+    if(!paused){
+        boolean[][] _tmp = new boolean[sizeX][sizeY];
+        //arrayCopy(board,_tmp); // _tmp = board.clone();
+
+        for(int x = 0; x < sizeX; x++){
+            for(int y = 0; y < sizeY; y++){
+                int c = countNeighbours(x,y);
+                if(c < minToLive || c > maxToLive)
+                    _tmp[x][y] = false;
+                else if(c == countForBirth || (c >= minToLive && c <= maxToLive && board[x][y]))
+                    _tmp[x][y] = true;
+            }
+        }
+
+        arrayCopy(_tmp, board); //board = _tmp.clone();
+        //paused = true;
+    }
+}
+
+// 1 2 3
+// 4   5
+// 6 7 8
+int countNeighbours(int x, int y){
+    int counter = 0;
+    
+    int _x = 0;
+    int _y = 0;
+    
+    //N1
+        if(x == 0)
+            _x = sizeX -1;
+        else
+            _x = x -1;
+            
+        if(y == 0)
+            _y = sizeY -1;
+        else
+            _y = y -1;
+        
+        if(board[_x][_y])
+            counter++;
+
+    //N2
+        _x = x;
+        if(y == 0)
+            _y = sizeY -1;
+        else
+            _y = y - 1;
+        if(board[_x][_y])
+            counter++;
+    //N3
+        if(x == sizeX -1)
+            _x = 0;
+        else
+            _x = x + 1;
+        if(y == 0)
+            _y = sizeY -1;
+        else
+            _y = y -1;
+        if(board[_x][_y])
+            counter++;
+    //N4
+        _y = y;
+        if(x == 0)
+            _x = sizeX -1;
+        else
+            _x = x -1;
+        if(board[_x][_y])
+            counter++;
+    //N5
+        _y = y;
+        if(x == sizeX -1)
+            _x = 0;
+        else
+            _x = x +1;
+        if(board[_x][_y])
+            counter++;
+    //N6
+        if(x == 0)
+            _x = sizeX -1;
+        else
+            _x = x -1;
+        if(y == sizeY -1)
+            _y = 0;
+        else
+            _y = y +1;
+        if(board[_x][_y])
+            counter++;
+    //N7
+        _x = x;
+        if(y == sizeY -1)
+            _y = 0;
+        else
+            _y = y +1;
+        if(board[_x][_y])
+            counter++;
+    //N8
+        if(x == sizeX -1)
+            _x = 0;
+        else
+            _x = x +1;
+        if(y == sizeY -1)
+            _y = 0;
+        else
+            _y = y +1;
+        if(board[_x][_y])
+            counter++;
+    return counter;
+}
+void pause(){
+    paused = !paused;
+}
+void keyPressed() {
+    if(keyCode == ENTER)
+        paused = !paused;
+    if(keyCode == DOWN)
+        reInit(20,20,10);
+}

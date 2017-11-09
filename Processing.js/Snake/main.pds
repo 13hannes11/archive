@@ -1,0 +1,157 @@
+boolean gameOver = false;
+int SizeX = 600;
+int SizeY = 600;
+sn snake1 = new sn();
+apple a = new apple();
+
+void setup(){
+    frameRate(10);
+    size(SizeX, SizeY);
+}
+void draw(){
+    if(focused){
+        background(0);
+        if(gameOver){
+            if(keyPressed){
+                snake1 = new sn();
+                a = new apple();
+                gameOver = false;
+            }
+            textSize(64);
+            fill(255);
+            text("GAME OVER!!!", 100, 180); 
+
+            textSize(32);
+            fill(0,0,255);
+            text("Score: " + (snake1.Length - 20), 220, 250);
+            fill(255,0,0);
+            text("PRESS ANY KEY TO RESTART",100, 300);
+        } else {
+            textSize(12);
+            fill(255);
+            text("Speed (Pixel per Second): " + (round(frameRate * 10)), 0, 12);
+            text("Score: " + (snake1.Length - 20), 0, 28);
+
+            if(snake1.Length < 10)
+                frameRate(10);
+            else
+                frameRate(snake1.Length);
+
+            snake1.Draw();
+            a.Draw();
+        
+            if(a.Collision(snake1.parts[0].X, snake1.parts[0].Y, snake1.parts[0].size)) { 
+                snake1.parts[snake1.Length] = new Part(snake1.parts[snake1.Length -1].X, snake1.parts[snake1.Length -1].Y); 
+                snake1.Length ++; 
+                a = new apple();
+            }
+        }
+        gameOver = snake1.Lose();
+    }
+}
+void keyPressed(){
+    snake1.keyPressed();
+}
+
+class apple{
+    int posX;
+    int posY;
+    int size = 10;
+
+    public apple(){
+        posX = (int)random(0, (SizeX - size) / 10) * 10;
+        posY = (int)random(0, (SizeY - size) / 10) * 10;
+    }
+    void Draw(){
+        fill(255,0,0);
+        rect(posX, posY, size, size);
+    }
+
+    public boolean Collision(int x, int y, int s){
+        if(posX == x && posY == y) {
+            return true;
+        } else { 
+            return false; 
+        } 
+    }
+}
+
+class sn{
+    public int Length = 20;
+    public String direction = "up";
+    public Part[] parts = new Part[1000];
+
+    public sn(){
+        int rx = (int)random(0,SizeX / 10) * 10; 
+        int ry = (int)random(0,SizeY / 10) * 10;
+        for(int i = 0; i < Length; i++){
+            parts[i] = new Part(rx, ry);
+            ry += 10;
+        }
+    }
+    boolean move(){
+        for(int i = Length - 2; i >= 0; i--){ 
+            parts[i + 1] = parts[i]; 
+        }
+
+        if(direction == "up") { 
+            parts[0] = new Part(parts[0].X, parts[0].Y - parts[0].size);
+        }
+        if(direction == "down") { 
+            parts[0] = new Part(parts[0].X, parts[0].Y + parts[0].size);
+        }
+        if(direction == "left") { 
+            parts[0] = new Part(parts[0].X - parts[0].size, parts[0].Y);
+        }
+        if(direction == "right") { 
+            parts[0] = new Part(parts[0].X + parts[0].size, parts[0].Y);
+        }
+    
+        return true;
+    }
+
+    boolean Lose(){
+        //Crossing Border
+        if(parts[0].X < 0 || parts[0].X + parts[0].size > SizeX || parts[0].Y < 0 || parts[0].Y + parts[0].size > SizeY ){
+            return true;
+    }
+
+    //Snake internal collision 
+    for(int i = 1; i < Length; i++)
+        if(parts[i].X == parts[0].X && parts[i].Y == parts[0].Y){
+            return true;
+        }
+        return false; 
+    }
+    void Draw(){ 
+        fill(255);
+        for (int i = Length - 1; i >= 0; i--) { 
+            parts[i].Draw();
+            println(i + " | " + parts[i].X + " | " + parts[i].Y);
+        }
+        move();
+    }
+    void keyPressed(){
+        if(keyCode == DOWN && direction != "up")
+            direction = "down";
+        if(keyCode == UP && direction != "down")
+            direction = "up";
+        if(keyCode == LEFT && direction != "right")
+            direction = "left";
+        if(keyCode == RIGHT && direction != "left")
+            direction = "right"; 
+    }
+}
+class Part{
+    public int size = 10;
+    public int X;
+    public int Y;
+
+    public Part(int x, int y){
+        X = x;
+        Y = y;
+    }
+    void Draw(){
+        rect(X, Y, size, size);
+    }
+}

@@ -1,0 +1,6 @@
+Error,  please use a valid command (valid commands: 'select <Token>' 'bag' 'colprint <columnnumber>' 'rowprint <rownumber>' 'place <rownumber>;<columnnumber>' 'quit' 
+Error,  please use a valid command (valid commands: 'select <Token>' 'bag' 'colprint <columnnumber>' 'rowprint <rownumber>' 'place <rownumber>;<columnnumber>' 'quit' 
+Error,  please use a valid command (valid commands: 'select <Token>' 'bag' 'colprint <columnnumber>' 'rowprint <rownumber>' 'place <rownumber>;<columnnumber>' 'quit' 
+Error,  please use a valid command (valid commands: 'select <Token>' 'bag' 'colprint <columnnumber>' 'rowprint <rownumber>' 'place <rownumber>;<columnnumber>' 'quit' 
+OK
+Error,  'place' has to be called before using this command again.

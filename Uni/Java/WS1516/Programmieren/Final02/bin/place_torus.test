@@ -1,0 +1,11 @@
+<"torus">
+"OK" : "select 0"
+"OK" : "place 1;1"
+"OK" : "select 1"
+"OK" : "place 1;-1"
+00err : "place 2;2"
+"OK" : "select 2"
+"OK" : "place 6;6"
+"OK" : "select 3"
+00err : "place"
+"OK" : "select 3"

@@ -1,0 +1,68 @@
+A
+B
+C
+D
+E
+F
+G
+--
+A;B;2;5
+A;C;100;2
+B;D;100;60
+B;E;300;20
+C;F;4;4
+C;G;20;6
+B
+C
+A
+D
+E
+A
+F
+G
+B
+B
+C
+C
+A B
+A B
+A B
+A B
+5
+2
+29
+A C
+A C
+A C
+A C
+2
+100
+10004
+A B D
+A B D
+A B D
+A B D
+65
+102
+14629
+A B E
+A B E
+A B E
+A B E
+25
+302
+91829
+A C F
+A C F
+A C F
+A C F
+6
+104
+10852
+A C G
+A C G
+A C G
+A C G
+8
+120
+14464

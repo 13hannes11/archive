@@ -1,0 +1,19 @@
+<"torus">
+"OK" : "select 14"
+"OK" : "place 0;1"
+
+"OK" : "select 13"
+"OK" : "place 5;0"
+
+"OK" : "select 15"
+"OK" : "place 2;3"
+
+"OK" : "select 12"
+"P1 wins
+3" : "place 1;2"
+
+"13 # # # # #" : "rowprint 5"
+"# # # # # 13" : "colprint 0"
+
+"# 14 # # # #" : "rowprint 0"
+"14 # # # # #" : "colprint 1"
